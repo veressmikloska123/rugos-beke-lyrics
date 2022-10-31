@@ -6,8 +6,16 @@ if len(sys.argv) > 1:
  if(sys.argv[1] == "y"):
   print("There is need for help")
   if len(sys.argv) > 2:
+   i = 0
+   print("Verse 0:")
    with open(sys.argv[2], 'r') as f:
-    print(f.read())
+    fuckinglines = f.readlines()
+    for fr in fuckinglines:
+     if(fr == "\n"):
+      i += 1
+      print("\nVerse "+str(i)+":")
+     else:
+      print(fr)
   else:
    print("WARNING: You do not know how it works. Refrain from doing that again.")
  else:
